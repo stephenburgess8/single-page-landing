@@ -12,10 +12,13 @@ function menuHandler()
 		navItems = document.getElementsByClassName("nav-li"),
 		navItemsLength = navItems.length;
 	
+	// Click on Menu label or icon to expand
 	menuIconContainer.addEventListener('click', function(e)
 	{
 		openCloseMenu();
 	}, false);
+
+	// Click outside menu to close
 	mainContainer.addEventListener('click', function(e)
 	{
 		if(navList.className !== "nav-ul")
@@ -27,20 +30,23 @@ function menuHandler()
 	function openCloseMenu()
 	{
 		if(navList.className === "nav-ul")
-		{
-			navList.style.display = "block";
+		{			
 			for(var i = 0; i < navItemsLength; i++)
 			{
-				navItems[i].style.display =  "block";
+				TweenLite.set(navItems[i], {height: "auto", display: "block", opacity: 1});
 			}
+			TweenLite.set(navList, {height: "auto", display: "block"});
+			TweenLite.from(navItems, .2, {
+				height: 0
+			});
 			navList.className = "nav-ul open";
 		}
 		else
 		{
-			navList.style.display = "";
+			TweenLite.to(navList, .2, {height: 0});
 			for(var i = 0; i < navItemsLength; i++)
 			{
-				navItems[i].style.display =  "";
+				TweenLite.to(navItems[i], 0, {opacity: 0});
 			}
 			navList.className = "nav-ul";
 		}

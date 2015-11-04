@@ -36,21 +36,30 @@ function menuHandler()
 			TweenLite.to(hamburger, 1, {morphSVG: closeIcon});
 			for(var i = 0; i < navItemsLength; i++)
 			{
-				TweenLite.set(navItems[i], {height: "auto", display: "block", opacity: 1});
+				TweenLite.set(navItems[i], {
+					height: "auto",
+					display: "block",
+					opacity: 1
+				});
 			}
-			TweenLite.set(navList, {height: "auto", display: "block"});
-			TweenLite.from(navItems, .2, {
-				height: 0
+			TweenLite.set(navList, {
+				height: "auto",
+				display: "block"
 			});
+			TweenLite.from(navItems, .2, { height: 0 });
 			navList.className = "nav-ul open";
 		}
 		else
 		{
 			TweenLite.to(hamburger, 1, {morphSVG: hamburger});
-			TweenLite.to(navList, .2, {height: 0});
+			TweenLite.to(navList, .2, { height: 0 });
 			for(var i = 0; i < navItemsLength; i++)
 			{
-				TweenLite.to(navItems[i], 0, {opacity: 0});
+				TweenLite.set(navItems[i], { opacity: 0});
+			}
+			for(var i = 0; i < navItemsLength; i++)
+			{
+				TweenLite.to(navItems[i], 0.1, { clearProps:"all"}, "=+.1");
 			}
 			navList.className = "nav-ul";
 		}

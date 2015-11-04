@@ -139,25 +139,23 @@ html { height: 100%; }
 }
 #menu-label, #menu-icon { display: block; }
 #menu-label {
-	color: #fff;
+	color: #A1887F;
 	float: left;
 	font-size: 1em;
 	margin-right: 9px;
 	vertical-align: text-bottom;
 	letter-spacing: .15em;
 }
+#menu-label:hover {
+	color: #EFEBE9;
+}
 #menu-icon {
 	float: left;
 	margin-top: 1px;
 	width: 28px;
 }
-.hamburger-block {
-	fill: #A1887F;
-}
-#close {
-	visibility: hidden;
-}
-
+.hamburger-block { fill: #A1887F; }
+#menu-icon:hover .hamburger-block {	fill: #EFEBE9; }
 /* Desktop Nav */
 @media (min-width: 750px) {
 	#menu-icon-container, #menu-label, #menu-icon {
@@ -168,13 +166,14 @@ html { height: 100%; }
 	}
 	.nav-ul, .nav-li {
 		display: block;
-		margin: 0 10px 0 0;
+		margin-right: 10px;
+		margin-top: 0;
+		opacity: 1;
 		width: auto;
 	}
 	.nav-li {
 		box-sizing: border-box;
 		float: left;
-		list-style: none;
 		margin-top: 0;
 		text-align: center;
 		padding-top: 0;

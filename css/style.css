@@ -142,12 +142,13 @@ html { height: 100%; }
 	color: #fff;
 	float: left;
 	font-size: 1em;
-	margin: 1px 9px 0 0;
+	margin-right: 9px;
 	vertical-align: text-bottom;
 	letter-spacing: .15em;
 }
 #menu-icon {
 	float: left;
+	margin-top: 1px;
 	width: 28px;
 }
 
@@ -272,10 +273,7 @@ html { height: 100%; }
 	background-image: url(../images/gloves-feature-blur.jpg);
 	margin-top: -500px;
 }
-#about-us {
-	padding-top: 1px;
-	padding-bottom: 60px;
-}
+#about-us {	padding-top: 1px; }
 #johnson-co-logo {
 	display: block;
 	margin: 50px auto;
@@ -283,6 +281,7 @@ html { height: 100%; }
 	width: 100%;
 }
 @media (min-width: 550px) {
+	#about-us {	padding-bottom: 60px; }
 	.text-block {
 		-webkit-column-count: 2; /* Chrome, Safari, Opera */
 	       -moz-column-count: 2; /* Firefox */

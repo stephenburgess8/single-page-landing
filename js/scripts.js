@@ -7,6 +7,7 @@ window.onload = function()
 function menuHandler()
 {
 	var menuIconContainer = document.getElementById("menu-icon-container"),
+		mainContainer = document.getElementById("main"),
 		navList = document.getElementsByClassName("nav-ul")[0],
 		navItems = document.getElementsByClassName("nav-li"),
 		navItemsLength = navItems.length;
@@ -14,6 +15,13 @@ function menuHandler()
 	menuIconContainer.addEventListener('click', function(e)
 	{
 		openCloseMenu();
+	}, false);
+	mainContainer.addEventListener('click', function(e)
+	{
+		if(navList.className !== "nav-ul")
+		{
+			openCloseMenu();
+		}
 	}, false);
 
 	function openCloseMenu()

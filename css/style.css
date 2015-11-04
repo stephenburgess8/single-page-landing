@@ -5,6 +5,27 @@ Page Header
 Main
 */
 
+/* Skeleton Overrides */
+
+@media (min-width: 550px) {
+  .four.columns {
+  	margin-left: 0;
+  	width: 100%;
+  }
+  
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+	.four.columns {
+		margin-left: 4%;
+		width: 30.6666666667%;
+	}
+  	.four.columns:first-child {
+		margin-left: 0;
+	}
+}
+
 /* Typography */
 @font-face {
     font-family: 'novecento_sans_widelight';
@@ -68,8 +89,8 @@ html { height: 100%; }
 }
 .logo {
 	float: left;
-	height: 30px;
-	width: 30px;
+	height: 40px;
+	width: 40px;
 }
 .company-name {
 	color: #fff;
@@ -252,22 +273,34 @@ html { height: 100%; }
 	margin-top: -500px;
 }
 #about-us {
-	padding-top: 20px;
-	padding-bottom: 70px;
+	padding-top: 1px;
+	padding-bottom: 60px;
 }
 #johnson-co-logo {
 	display: block;
 	margin: 50px auto;
-	width: 400px;
+	max-width: 400px;
+	width: 100%;
 }
 @media (min-width: 550px) {
 	.text-block {
 		-webkit-column-count: 2; /* Chrome, Safari, Opera */
-	    -moz-column-count: 2; /* Firefox */
-	    column-count: 2;
-	    -webkit-column-gap: 46px; /* Chrome, Safari, Opera */
-	    -moz-column-gap: 46px; /* Firefox */
-	    column-gap: 46px;
+	       -moz-column-count: 2; /* Firefox */
+	            column-count: 2;
+	            -webkit-column-count: 2; /* Chrome, Safari, Opera */
+	       -moz-column-count: 2; /* Firefox */
+	            column-count: 2;
+	    -webkit-column-gap: 50px; /* Chrome, Safari, Opera */
+	       -moz-column-gap: 50px; /* Firefox */
+	            column-gap: 50px;
+		   -moz-column-fill: balance; /* Firefox */
+	            column-fill: balance;
+	}
+	.text-block .p {
+		margin-bottom: 0;
+	}
+	.text-block .p:not(:first-child) {
+		margin-top: 1.6em;
 	}
 }
 

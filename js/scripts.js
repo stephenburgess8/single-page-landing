@@ -7,6 +7,8 @@ window.onload = function()
 function menuHandler()
 {
 	var menuIconContainer = document.getElementById("menu-icon-container"),
+		hamburger = document.getElementById("hamburger"),
+		closeIcon = document.getElementById("close"),
 		mainContainer = document.getElementById("main"),
 		navList = document.getElementsByClassName("nav-ul")[0],
 		navItems = document.getElementsByClassName("nav-li"),
@@ -30,7 +32,8 @@ function menuHandler()
 	function openCloseMenu()
 	{
 		if(navList.className === "nav-ul")
-		{			
+		{
+			TweenLite.to(hamburger, 1, {morphSVG: closeIcon});
 			for(var i = 0; i < navItemsLength; i++)
 			{
 				TweenLite.set(navItems[i], {height: "auto", display: "block", opacity: 1});
@@ -43,6 +46,7 @@ function menuHandler()
 		}
 		else
 		{
+			TweenLite.to(hamburger, 1, {morphSVG: hamburger});
 			TweenLite.to(navList, .2, {height: 0});
 			for(var i = 0; i < navItemsLength; i++)
 			{

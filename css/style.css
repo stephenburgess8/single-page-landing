@@ -151,6 +151,12 @@ html { height: 100%; }
 	margin-top: 1px;
 	width: 28px;
 }
+.hamburger-block {
+	fill: #A1887F;
+}
+#close {
+	visibility: hidden;
+}
 
 /* Desktop Nav */
 @media (min-width: 750px) {
